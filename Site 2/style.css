@@ -1,0 +1,237 @@
+body{
+	font-family: 'arial';
+	margin: 0px;
+	padding: 0px;
+}
+
+/*-----------------------------------------------DEBUT MENU-------------------------------------------*/
+nav input[type=checkbox]{
+	display: none;
+}
+
+nav label {
+	display: none;
+}
+
+nav{
+	width: 100%;
+	background-color: #424558;
+}
+
+nav > ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+nav > ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+nav > ul > li{
+	float: left;
+	position: relative;
+}
+
+nav > ul > li > a{
+	padding: 20px 30px;
+	color:#fff;
+}
+
+nav > ul >li:hover a{
+	padding: 15px 30px 20px 30px;
+}
+
+nav li {
+	list-style-type: none;
+}
+
+.submenu{
+	display: none;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none; 
+}
+
+nav li:hover .submenu{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 1000;
+}
+
+.submenu li{
+	border-bottom: 1px solid #ccc;
+}
+
+.submenu li a{
+	padding: 15px 30px;
+	font-size: 13px;
+	color: #333333;
+	width: 60px; 
+}
+
+.menu-portfolio:hover{
+	border-top: 5px solid #e44d26;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+.menu-services:hover{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(000, 112, 192, 0.15);
+}
+.menu-contacts:hover{
+	border-top: 5px solid #f1dc4f;
+	background-color: rgba(241, 221, 79, 0.15);
+}
+
+.menu-portfolio .submenu{
+	background-color: rgb(230, 100, 40);
+}
+.menu-services .submenu{
+	background-color: rgb(000, 160, 240);
+}
+
+.submenu li:hover a{
+	color: #eee;
+	font-weight: bold;
+}
+
+.menu-portfolio .submenu li:hover{
+	background-color: rgb(210, 77, 60);
+}
+
+.menu-services .submenu li:hover{
+	background-color: rgb(000, 115, 200);
+}
+
+nav input[type=checkbox]:checked ~ ul{
+	display: block;
+}
+
+@media screen and (max-width:780px){
+	.menu-mobile{
+		display: block;
+		color: #fff;
+		background-color: rgba(29, 197, 151, 0.97);
+		text-align: center;
+		padding: 12px 0px;
+	}
+	nav ul{
+		display: none;
+		margin: 0px;
+	}
+	nav ul li, nav ul li a{
+		width: 100%;
+		text-align: center;
+	}
+	nav ul li a, nav ul li:hover a {
+		padding: 10px 0px;
+	}
+	nav li:hover .submenu{
+		display: block;
+		position: static;
+	}
+}
+
+#conteneur{
+	margin: auto;
+	width: 80%;
+}
+
+/*-----------------------------------------------FIN MENU-------------------------------------------*/
+
+/*-----------------------------------------------DEBUT LOGO-------------------------------------------*/
+
+/*#logo{
+	background: red;
+}*/
+
+#logo img{
+	margin: 5px;
+	width: 100px;
+	padding-left: 2%;
+}
+/*-----------------------------------------------FIN LOGO-------------------------------------------*/
+
+/*-----------------------------------------------DEBUT CORPS-------------------------------------------*/
+#corps{
+	width: 100%;
+	display: flex;
+}
+
+#compile{
+	width: 33.8%;
+	margin-left: 1.2%;
+	position: relative;
+}
+
+#part1{
+	width: 65%;
+	height: 70vh;
+	background: #007dff;
+}
+
+#part2{
+	width: 100%;
+	height: 34vh;
+	background: #00d1ff;
+}
+
+#part3{
+	width: 100%;
+	height: 34vh;
+	background: #00f7ff;
+	position: absolute;
+	bottom: 0px;
+}
+/*-----------------------------------------------FIN CORPS-------------------------------------------*/
+
+/*-----------------------------------------------DEBUT FOOTER-------------------------------------------*/
+footer{
+	width: 100%;
+	background: #333;
+	display: flex;
+	height: 10vh;
+}
+
+#foot1{
+	width: 33%;
+	background:#666;
+}
+
+#foot2{
+	width: 33%;
+	background:#666;
+	margin: 0% 0.5% 0% 0.5%;
+}
+#foot3{
+	width: 33%;
+	background:#666;
+}
+/*-----------------------------------------------FIN FOOTER-------------------------------------------*/
+
+@media screen and (max-width:780px){
+	footer{
+		display: none;
+	}
+	#corps{
+	display: block;
+	}
+	#compile{
+	width: 100%;
+	margin: auto;
+	}
+	#part1{
+	width: 100%;
+	}
+	#part3{
+	position: relative;
+	}
+	#logo{
+	text-align: center;
+}
